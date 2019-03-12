@@ -16,6 +16,7 @@
     <Tabs :filter="filter"
           :todos="todos"
           @togole = "togoleFilter"
+          @clearAllCompleted  = "clearAllCompleted"
 
     ></Tabs>
   </section>
@@ -42,6 +43,7 @@
           return this.todos
         }
         const completed = this.filter === 'completed'
+        // console.log("completed:"+completed);
         return this.todos.filter(todo => completed === todo.completed)
       }
     },
@@ -69,6 +71,9 @@
       togoleFilter(state){
         this.filter = state
       },
+      clearAllCompleted(){
+        this.todos = this.todos.filter(todo => !todo.completed)
+      }
     },
 
   }

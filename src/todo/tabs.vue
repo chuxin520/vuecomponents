@@ -40,7 +40,7 @@
       },
       methods:{
         clearAllCompleted(){
-
+          this.$emit('clearAllCompleted')
         },
         toggleFilter(state){
           this.$emit('togole',state)

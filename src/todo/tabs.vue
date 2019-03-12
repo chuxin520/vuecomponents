@@ -18,12 +18,36 @@
 
 <script>
     export default {
-
-        data(){
-            return {
-                states: ['all','active','completed']
-            }
+      data(){
+        return {
+          states: ['all','active','completed']
         }
+      },
+      props: {
+        todos: {
+          type: Array,
+          required: true,
+        },
+        filter:{
+          type: String,
+          required: true,
+        }
+      },
+      computed:{
+        unFinishedTodoLength(){
+          return this.todos.filter(todo => !todo.completed).length;
+        }
+      },
+      methods:{
+        clearAllCompleted(){
+
+        },
+        toggleFilter(state){
+          this.$emit('togole',state)
+        }
+      }
+
+
     }
 
 </script>

@@ -13,6 +13,7 @@ Vue.config.devtools = true
 
 const root = document.createElement('div')  //创建div节点
 document.body.appendChild(root);            //将div节点添加到body下
+// document.body.appendChild(root);            //将div节点添加到body下
 
 new Vue({
     render: (h) => h(App)

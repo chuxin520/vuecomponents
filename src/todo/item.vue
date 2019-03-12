@@ -10,9 +10,8 @@
     </div>
 </template>
 <script>
-
     export default {
-        props: {
+      props: {
             todo: {
                 type: Object,
                 required: true
@@ -21,7 +20,7 @@
         methods: {
 //            vm.$emit( event, arg )
 //            $emit 绑定一个自定义事件event，当这个这个语句被执行到的时候，就会将参数arg传递给父组件，父组件通过@event监听并接收参数。
-//            子组件点击动作执行方法deleteTodo只是传递，传递event---del  和 arg---this.todo.id,具体的数据处理在父组件
+//            子组件点击动作执行方法deleteTodo，方法就触发执行了，数据改变，然后传递event---del  和 arg---this.todo.id,父组件是否监听及处理是父组件的事情
             deleteTodo(){
                 this.$emit('del',this.todo.id)
             }

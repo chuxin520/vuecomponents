@@ -7,9 +7,7 @@ body {
 }
 body {
     background-image: url("../images/bgbg.jpg");
-    background-size: cover;
-    background-position: center;
     font: 14px 'microsoft yahei';
-    color: '#4d4d4d';
+    color: #4d4d4d;
     font-weight: 300;
 }
